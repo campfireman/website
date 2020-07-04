@@ -1,10 +1,24 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Ture Claußen`,
+    siteTitleAlt: `ture.dev | Ture Claußen`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `ture.dev`,
+    // Default title of the page
+    siteHeadline: `ture.dev | Ture Claußen`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://ture.dev`,
+    // Used for SEO
+    siteDescription: `This is Ture's website`,
+    // Will be set on the <html /> tag
+    siteLanguage: `de`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`,
   },
   plugins: [
     {
@@ -21,15 +35,21 @@ module.exports = {
             slug: `/about`,
           },
         ],
+        externalLinks: [
+          {
+            name: `Gitlab`,
+            url: `https://gitlab.com/CampFireMan`,
+          },
+        ],
       },
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
+        name: `Ture Claußen`,
         short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        description: `Das ist meine Website`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
@@ -49,6 +69,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
   ],
-}
+};
