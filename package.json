@@ -24,7 +24,7 @@
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-remark-katex": "^3.3.9",
-    "gatsby-transformer-remark": "^2.8.23",
+    "gatsby-transformer-remark": "^5.25.1",
     "katex": "^0.11.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
